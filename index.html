@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stoneworks | Marble, Granite, Quartz & Porcelain</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: #fff;
+      line-height: 1.6;
+    }
+    header {
+      background: linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)), url('kitchen1.jpg') center/cover no-repeat;
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+    }
+    .hero {
+      max-width: 900px;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 15px;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 25px;
+      color: #ddd;
+    }
+    .btn {
+      display: inline-block;
+      padding: 14px 24px;
+      background: #c9a96e;
+      color: #111;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 6px;
+    }
+    nav {
+      position: sticky;
+      top: 0;
+      background: #000;
+      padding: 15px 20px;
+      z-index: 10;
+      border-bottom: 1px solid #222;
+    }
+    nav .wrap {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 18px;
+    }
+    section {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 70px 20px;
+    }
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #c9a96e;
+    }
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+      gap: 20px;
+    }
+    .card {
+      background: #181818;
+      padding: 24px;
+      border-radius: 10px;
+      border: 1px solid #2a2a2a;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+      gap: 16px;
+    }
+    .gallery img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      border-radius: 10px;
+      display: block;
+    }
+    .about p, .contact p {
+      max-width: 850px;
+      color: #ddd;
+      margin-bottom: 14px;
+    }
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      background: #000;
+      color: #aaa;
+      border-top: 1px solid #222;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="wrap">
+      <strong>STONEWORKS</strong>
+      <div>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <header>
+    <div class="hero">
+      <h1>World-Class Marble, Granite, Quartz & Porcelain</h1>
+      <p>Since 2004, Stoneworks has delivered premium kitchens, fireplaces, vanities, basins, cladding, cut-to-size work and bespoke stone installations across South Africa and beyond.</p>
+      <a class="btn" href="#contact">Get in Touch</a>
+    </div>
+  </header>
+
+  <section id="about" class="about">
+    <h2>About Stoneworks</h2>
+    <p>Stoneworks started in January 2004 with a focus on high-end stone craftsmanship, precision fabrication and exceptional installation quality.</p>
+    <p>We serve mainly Gauteng and Cape Town, while also taking on projects across South Africa and selected international work. From statement fireplaces and luxury bathrooms to bold kitchen islands and custom basins, our work is built to stand out.</p>
+    <p>We also offer trade services including cut-to-size, polishing, custom fabrication and specialist stone supply support.</p>
+  </section>
+
+  <section id="services">
+    <h2>Our Services</h2>
+    <div class="services">
+      <div class="card">Kitchens & waterfall islands</div>
+      <div class="card">Bathrooms & vanities</div>
+      <div class="card">Custom basins & sinks</div>
+      <div class="card">Fireplaces & surrounds</div>
+      <div class="card">Feature walls & cladding</div>
+      <div class="card">Cut-to-size & polishing</div>
+      <div class="card">Trade fabrication support</div>
+      <div class="card">Supply & installation</div>
+    </div>
+  </section>
+
+  <section id="gallery">
+    <h2>Featured Work</h2>
+    <div class="gallery">
+      <img src="kitchen1.jpg" alt="Kitchen project 1">
+      <img src="kitchen2.jpg" alt="Kitchen project 2">
+      <img src="kitchen3.jpg" alt="Kitchen project 3">
+      <img src="bath1.jpg" alt="Bathroom project 1">
+      <img src="bath2.jpg" alt="Bathroom project 2">
+      <img src="bath3.jpg" alt="Bathroom project 3">
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact</h2>
+    <p><strong>Stoneworks</strong></p>
+    <p>Supply, fabrication and installation of marble, granite, quartz, sintered stone and porcelain.</p>
+    <p>Email: alistair@stone-works.co.za</p>
+    <p>Phone: 072 635 6890</p>
+    <p>Areas: Gauteng, Cape Town, South Africa-wide and selected international projects.</p>
+  </section>
+
+  <footer>
+    © 2026 Stoneworks. All rights reserved.
+  </footer>
+
+</body>
+</html>
