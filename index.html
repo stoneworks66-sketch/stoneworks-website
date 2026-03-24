@@ -19,7 +19,7 @@ nav {
   position: fixed;
   width: 100%;
   background: rgba(0,0,0,0.85);
-  padding: 15px 30px;
+  padding: 20px 50px;
   display: flex;
   justify-content: flex-end;
   z-index: 100;
@@ -28,14 +28,14 @@ nav {
 nav a {
   color: white;
   text-decoration: none;
-  margin-left: 20px;
+  margin-left: 25px;
   font-size: 14px;
 }
 
 /* HERO */
 header {
   height: 100vh;
-  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('kitchen1.jpg');
+  background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url('kitchen1.jpg');
   background-size: cover;
   background-position: center 85%;
   display: flex;
@@ -46,7 +46,8 @@ header {
 }
 
 header h1 {
-  font-size: 50px;
+  font-size: 56px;
+  letter-spacing: 2px;
   margin-bottom: 10px;
 }
 
@@ -57,40 +58,46 @@ header p {
 
 .btn {
   background: #c9a96e;
-  padding: 12px 25px;
+  padding: 14px 30px;
   text-decoration: none;
   color: black;
   border-radius: 5px;
   font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #b89555;
 }
 
 /* SECTIONS */
 section {
-  padding: 60px 20px;
+  padding: 70px 20px;
   max-width: 1200px;
   margin: auto;
 }
 
 h2 {
   color: #c9a96e;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
+  font-size: 28px;
 }
 
 /* GALLERY */
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+  gap: 25px;
 }
 
 .gallery img {
   width: 100%;
   border-radius: 10px;
-  transition: 0.3s;
+  transition: 0.4s;
 }
 
 .gallery img:hover {
-  transform: scale(1.05);
+  transform: scale(1.06);
 }
 
 /* WHATSAPP */
@@ -120,6 +127,7 @@ footer {
 <nav>
   <a href="#kitchens">Kitchens</a>
   <a href="#bathrooms">Bathrooms</a>
+  <a href="#fireplaces">Fireplaces</a>
   <a href="#contact">Contact</a>
 </nav>
 
@@ -149,12 +157,21 @@ footer {
   </div>
 </section>
 
+<section id="fireplaces">
+  <h2>Fireplaces</h2>
+  <div class="gallery">
+    <img src="fire1.jpg">
+    <img src="fire2.jpg">
+    <img src="fire3.jpg">
+  </div>
+</section>
+
 <section>
   <h2>Why choose us</h2>
   <p>✔ Over 20 years experience (since 2004)</p>
-  <p>✔ Precision mitred fabrication</p>
-  <p>✔ Luxury finishes with attention to detail</p>
-  <p>✔ Gauteng, Cape Town & nationwide</p>
+  <p>✔ Expert mitred fabrication — creating a seamless luxury look</p>
+  <p>✔ High-end finishes with attention to detail</p>
+  <p>✔ Gauteng, Cape Town & nationwide projects</p>
 </section>
 
 <section id="contact">
