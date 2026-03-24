@@ -3,14 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Stoneworks | Marble, Granite, Quartz & Porcelain</title>
+<title>Stoneworks | Luxury Stone Specialists</title>
 
 <style>
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #0f0f0f;
+  background: #0b0b0b;
   color: white;
 }
 
@@ -18,51 +17,53 @@ body {
 nav {
   position: fixed;
   width: 100%;
-  background: rgba(0,0,0,0.85);
-  padding: 20px 50px;
+  background: rgba(0,0,0,0.9);
+  padding: 20px 60px;
   display: flex;
   justify-content: flex-end;
   z-index: 100;
 }
 
 nav a {
-  color: white;
+  color: #ccc;
   text-decoration: none;
-  margin-left: 25px;
+  margin-left: 30px;
   font-size: 14px;
+}
+
+nav a:hover {
+  color: white;
 }
 
 /* HERO */
 header {
   height: 100vh;
-  background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url('kitchen1.jpg');
+  background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('kitchen1.jpg');
   background-size: cover;
   background-position: center 85%;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 20px;
 }
 
 header h1 {
-  font-size: 56px;
-  letter-spacing: 2px;
-  margin-bottom: 10px;
+  font-size: 60px;
+  letter-spacing: 3px;
 }
 
 header p {
-  color: #ccc;
-  margin-bottom: 20px;
+  color: #aaa;
+  margin: 15px 0 30px;
 }
 
 .btn {
   background: #c9a96e;
-  padding: 14px 30px;
-  text-decoration: none;
+  padding: 14px 35px;
   color: black;
-  border-radius: 5px;
+  text-decoration: none;
   font-weight: bold;
+  border-radius: 4px;
   transition: 0.3s;
 }
 
@@ -70,17 +71,22 @@ header p {
   background: #b89555;
 }
 
-/* SECTIONS */
+/* SECTION */
 section {
-  padding: 70px 20px;
+  padding: 80px 20px;
   max-width: 1200px;
   margin: auto;
 }
 
 h2 {
   color: #c9a96e;
-  margin-bottom: 25px;
-  font-size: 28px;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.sub {
+  color: #888;
+  margin-bottom: 30px;
 }
 
 /* GALLERY */
@@ -92,12 +98,12 @@ h2 {
 
 .gallery img {
   width: 100%;
-  border-radius: 10px;
+  border-radius: 8px;
   transition: 0.4s;
 }
 
 .gallery img:hover {
-  transform: scale(1.06);
+  transform: scale(1.07);
 }
 
 /* WHATSAPP */
@@ -117,7 +123,8 @@ h2 {
 footer {
   background: black;
   text-align: center;
-  padding: 20px;
+  padding: 30px;
+  color: #777;
 }
 </style>
 </head>
@@ -134,13 +141,14 @@ footer {
 <header>
   <div>
     <h1>Luxury Stone Specialists</h1>
-    <p>Marble • Granite • Quartz • Porcelain</p>
-    <a class="btn" href="#contact">Get a Quote</a>
+    <p>Precision fabrication. Seamless finishes. High-end interiors.</p>
+    <a class="btn" href="#contact">Request a Quote</a>
   </div>
 </header>
 
 <section id="kitchens">
-  <h2>Kitchens</h2>
+  <h2>Bespoke Stone Kitchens</h2>
+  <p class="sub">Designed and fabricated with precision mitred edges and seamless finishes.</p>
   <div class="gallery">
     <img src="kitchen1.jpg">
     <img src="kitchen2.jpg">
@@ -149,7 +157,8 @@ footer {
 </section>
 
 <section id="bathrooms">
-  <h2>Bathrooms</h2>
+  <h2>Luxury Bathroom Surfaces</h2>
+  <p class="sub">Clean lines, premium materials and flawless detailing.</p>
   <div class="gallery">
     <img src="bath1.jpg">
     <img src="bath2.jpg">
@@ -158,7 +167,8 @@ footer {
 </section>
 
 <section id="fireplaces">
-  <h2>Fireplaces</h2>
+  <h2>Feature Fireplaces & Statement Walls</h2>
+  <p class="sub">Custom designs using mitred fabrication for a seamless, solid-stone appearance.</p>
   <div class="gallery">
     <img src="fire1.jpg">
     <img src="fire2.jpg">
@@ -167,17 +177,16 @@ footer {
 </section>
 
 <section>
-  <h2>Why choose us</h2>
-  <p>✔ Over 20 years experience (since 2004)</p>
-  <p>✔ Expert mitred fabrication — creating a seamless luxury look</p>
-  <p>✔ High-end finishes with attention to detail</p>
-  <p>✔ Gauteng, Cape Town & nationwide projects</p>
+  <h2>Why Stoneworks</h2>
+  <p class="sub">
+    Over 20 years of experience delivering high-end stone solutions with precision craftsmanship.
+  </p>
 </section>
 
 <section id="contact">
   <h2>Contact</h2>
-  <p>📞 072 635 6890</p>
-  <p>✉️ alistair@stone-works.co.za</p>
+  <p>072 635 6890</p>
+  <p>alistair@stone-works.co.za</p>
 </section>
 
 <a class="whatsapp" href="https://wa.me/27726356890">WhatsApp</a>
