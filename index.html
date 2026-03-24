@@ -4,6 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>Stoneworks | Marble, Granite, Quartz & Porcelain</title>
+
 <style>
 body {
   margin: 0;
@@ -12,13 +14,14 @@ body {
   color: white;
 }
 
+/* NAV */
 nav {
   position: fixed;
   width: 100%;
-  background: rgba(0,0,0,0.9);
+  background: rgba(0,0,0,0.85);
   padding: 15px 30px;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   z-index: 100;
 }
 
@@ -26,13 +29,15 @@ nav a {
   color: white;
   text-decoration: none;
   margin-left: 20px;
+  font-size: 14px;
 }
 
+/* HERO */
 header {
   height: 100vh;
   background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('kitchen1.jpg');
   background-size: cover;
-  background-position: center 80%;
+  background-position: center 85%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -42,10 +47,12 @@ header {
 
 header h1 {
   font-size: 50px;
+  margin-bottom: 10px;
 }
 
 header p {
   color: #ccc;
+  margin-bottom: 20px;
 }
 
 .btn {
@@ -57,6 +64,7 @@ header p {
   font-weight: bold;
 }
 
+/* SECTIONS */
 section {
   padding: 60px 20px;
   max-width: 1200px;
@@ -65,8 +73,10 @@ section {
 
 h2 {
   color: #c9a96e;
+  margin-bottom: 20px;
 }
 
+/* GALLERY */
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
@@ -76,8 +86,14 @@ h2 {
 .gallery img {
   width: 100%;
   border-radius: 10px;
+  transition: 0.3s;
 }
 
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* WHATSAPP */
 .whatsapp {
   position: fixed;
   bottom: 20px;
@@ -90,6 +106,7 @@ h2 {
   font-weight: bold;
 }
 
+/* FOOTER */
 footer {
   background: black;
   text-align: center;
@@ -101,19 +118,15 @@ footer {
 <body>
 
 <nav>
-  <div>STONEWORKS</div>
-  <div>
-    <a href="#kitchens">Kitchens</a>
-    <a href="#bathrooms">Bathrooms</a>
-    <a href="#contact">Contact</a>
-  </div>
+  <a href="#kitchens">Kitchens</a>
+  <a href="#bathrooms">Bathrooms</a>
+  <a href="#contact">Contact</a>
 </nav>
 
 <header>
   <div>
     <h1>Luxury Stone Specialists</h1>
     <p>Marble • Granite • Quartz • Porcelain</p>
-    <br>
     <a class="btn" href="#contact">Get a Quote</a>
   </div>
 </header>
@@ -138,10 +151,10 @@ footer {
 
 <section>
   <h2>Why choose us</h2>
-  <p>✔ Over 20 years experience</p>
-  <p>✔ High-end finishes and precision work</p>
-  <p>✔ Mitred fabrication for seamless look</p>
-  <p>✔ Gauteng, Cape Town and nationwide</p>
+  <p>✔ Over 20 years experience (since 2004)</p>
+  <p>✔ Precision mitred fabrication</p>
+  <p>✔ Luxury finishes with attention to detail</p>
+  <p>✔ Gauteng, Cape Town & nationwide</p>
 </section>
 
 <section id="contact">
