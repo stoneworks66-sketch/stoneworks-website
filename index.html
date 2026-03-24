@@ -1,199 +1,452 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Stoneworks | Luxury Stone Specialists</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stoneworks | Luxury Stone Specialists</title>
 
-<style>
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #0b0b0b;
-  color: white;
-}
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
 
-/* NAV */
-nav {
-  position: fixed;
-  width: 100%;
-  background: rgba(0,0,0,0.9);
-  padding: 20px 60px;
-  display: flex;
-  justify-content: flex-end;
-  z-index: 100;
-}
+    body {
+      font-family: Arial, sans-serif;
+      background: #0b0b0b;
+      color: #ffffff;
+      line-height: 1.6;
+    }
 
-nav a {
-  color: #ccc;
-  text-decoration: none;
-  margin-left: 30px;
-  font-size: 14px;
-}
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(0,0,0,0.88);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
 
-nav a:hover {
-  color: white;
-}
+    .nav-wrap {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 18px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
-/* HERO */
-header {
-  height: 100vh;
-  background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('kitchen1.jpg');
-  background-size: cover;
-  background-position: center 85%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
+    .logo {
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: #d4af63;
+    }
 
-header h1 {
-  font-size: 60px;
-  letter-spacing: 3px;
-}
+    .nav-links a {
+      color: #ddd;
+      text-decoration: none;
+      margin-left: 22px;
+      font-size: 14px;
+    }
 
-header p {
-  color: #aaa;
-  margin: 15px 0 30px;
-}
+    .nav-links a:hover {
+      color: #fff;
+    }
 
-.btn {
-  background: #c9a96e;
-  padding: 14px 35px;
-  color: black;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 4px;
-  transition: 0.3s;
-}
+    header {
+      min-height: 100vh;
+      background:
+        linear-gradient(rgba(0,0,0,0.72), rgba(0,0,0,0.72)),
+        url('kitchen1.jpg') center 85% / cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 120px 24px 60px;
+    }
 
-.btn:hover {
-  background: #b89555;
-}
+    .hero {
+      max-width: 950px;
+    }
 
-/* SECTION */
-section {
-  padding: 80px 20px;
-  max-width: 1200px;
-  margin: auto;
-}
+    .hero-top {
+      color: #d4af63;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 13px;
+      margin-bottom: 18px;
+    }
 
-h2 {
-  color: #c9a96e;
-  font-size: 30px;
-  margin-bottom: 10px;
-}
+    .hero h1 {
+      font-size: 58px;
+      line-height: 1.08;
+      margin-bottom: 18px;
+    }
 
-.sub {
-  color: #888;
-  margin-bottom: 30px;
-}
+    .hero p {
+      max-width: 760px;
+      margin: 0 auto 30px;
+      color: #d0d0d0;
+      font-size: 18px;
+    }
 
-/* GALLERY */
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
-  gap: 25px;
-}
+    .hero-buttons {
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
 
-.gallery img {
-  width: 100%;
-  border-radius: 8px;
-  transition: 0.4s;
-}
+    .btn {
+      display: inline-block;
+      padding: 14px 28px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 700;
+      transition: 0.3s;
+    }
 
-.gallery img:hover {
-  transform: scale(1.07);
-}
+    .btn-gold {
+      background: #d4af63;
+      color: #111;
+    }
 
-/* WHATSAPP */
-.whatsapp {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #25D366;
-  color: white;
-  padding: 15px 20px;
-  border-radius: 50px;
-  text-decoration: none;
-  font-weight: bold;
-}
+    .btn-gold:hover {
+      background: #bf9951;
+    }
 
-/* FOOTER */
-footer {
-  background: black;
-  text-align: center;
-  padding: 30px;
-  color: #777;
-}
-</style>
+    .btn-dark {
+      border: 1px solid rgba(255,255,255,0.18);
+      color: #fff;
+      background: rgba(255,255,255,0.04);
+    }
+
+    .btn-dark:hover {
+      background: rgba(255,255,255,0.08);
+    }
+
+    section {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 80px 24px;
+    }
+
+    .section-title {
+      color: #d4af63;
+      font-size: 30px;
+      margin-bottom: 12px;
+    }
+
+    .section-sub {
+      color: #bdbdbd;
+      max-width: 900px;
+      margin-bottom: 30px;
+      font-size: 17px;
+    }
+
+    .trust-bar {
+      background: #111;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 26px 24px;
+    }
+
+    .trust-item {
+      color: #d9d9d9;
+      font-size: 15px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #131313;
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 12px;
+      padding: 24px;
+    }
+
+    .card h3 {
+      color: #fff;
+      margin-bottom: 10px;
+      font-size: 20px;
+    }
+
+    .card p {
+      color: #bcbcbc;
+      font-size: 15px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 22px;
+      margin-top: 24px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 340px;
+      object-fit: cover;
+      border-radius: 10px;
+      display: block;
+      transition: transform 0.35s ease;
+      border: 1px solid rgba(255,255,255,0.08);
+      background: #121212;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.03);
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 28px;
+      align-items: start;
+    }
+
+    .text-box {
+      background: #131313;
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 12px;
+      padding: 26px;
+    }
+
+    .text-box p {
+      color: #c8c8c8;
+      margin-bottom: 14px;
+    }
+
+    .bullet-list p {
+      margin-bottom: 10px;
+      color: #ddd;
+    }
+
+    .contact-box {
+      background: #131313;
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 12px;
+      padding: 28px;
+    }
+
+    .contact-box p {
+      color: #ddd;
+      margin-bottom: 10px;
+      font-size: 16px;
+    }
+
+    .cta {
+      text-align: center;
+      background: linear-gradient(180deg, #121212, #0b0b0b);
+      border-top: 1px solid rgba(255,255,255,0.06);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .cta p {
+      color: #d2d2d2;
+      max-width: 850px;
+      margin: 0 auto 24px;
+      font-size: 18px;
+    }
+
+    .whatsapp {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      background: #25D366;
+      color: #fff;
+      text-decoration: none;
+      padding: 15px 20px;
+      border-radius: 50px;
+      font-weight: 700;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+    }
+
+    footer {
+      background: #000;
+      color: #8e8e8e;
+      text-align: center;
+      padding: 26px 20px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 900px) {
+      .split {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        font-size: 40px;
+      }
+
+      .nav-wrap {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .nav-links a {
+        margin: 0 10px;
+      }
+    }
+  </style>
 </head>
-
 <body>
 
-<nav>
-  <a href="#kitchens">Kitchens</a>
-  <a href="#bathrooms">Bathrooms</a>
-  <a href="#fireplaces">Fireplaces</a>
-  <a href="#contact">Contact</a>
-</nav>
+  <nav>
+    <div class="nav-wrap">
+      <div class="logo">STONEWORKS</div>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#kitchens">Kitchens</a>
+        <a href="#bathrooms">Bathrooms</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
 
-<header>
-  <div>
-    <h1>Luxury Stone Specialists</h1>
-    <p>Precision fabrication. Seamless finishes. High-end interiors.</p>
-    <a class="btn" href="#contact">Request a Quote</a>
+  <header>
+    <div class="hero">
+      <div class="hero-top">Established in January 2004</div>
+      <h1>Luxury stone fabrication and installation for exceptional interiors.</h1>
+      <p>
+        Stoneworks specialises in premium marble, granite, quartz, porcelain and sintered stone for bespoke kitchens, luxury bathrooms, custom basins, fireplaces, feature walls and high-end residential spaces.
+      </p>
+      <div class="hero-buttons">
+        <a class="btn btn-gold" href="#contact">Request a Quote</a>
+        <a class="btn btn-dark" href="#kitchens">View Our Work</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="trust-bar">
+    <div class="trust-grid">
+      <div class="trust-item">✔ Since 2004</div>
+      <div class="trust-item">✔ Precision mitred fabrication</div>
+      <div class="trust-item">✔ Gauteng & Cape Town focus</div>
+      <div class="trust-item">✔ South Africa-wide & selected international work</div>
+    </div>
   </div>
-</header>
 
-<section id="kitchens">
-  <h2>Bespoke Stone Kitchens</h2>
-  <p class="sub">Designed and fabricated with precision mitred edges and seamless finishes.</p>
-  <div class="gallery">
-    <img src="kitchen1.jpg">
-    <img src="kitchen2.jpg">
-    <img src="kitchen3.jpg">
-  </div>
-</section>
+  <section id="about">
+    <h2 class="section-title">About Stoneworks</h2>
+    <p class="section-sub">
+      With over 20 years of experience, Stoneworks has built its name on premium workmanship, clean detailing and a refined approach to stone fabrication and installation.
+    </p>
 
-<section id="bathrooms">
-  <h2>Luxury Bathroom Surfaces</h2>
-  <p class="sub">Clean lines, premium materials and flawless detailing.</p>
-  <div class="gallery">
-    <img src="bath1.jpg">
-    <img src="bath2.jpg">
-    <img src="bath3.jpg">
-  </div>
-</section>
+    <div class="split">
+      <div class="text-box">
+        <p>
+          We work mainly across Gauteng and Cape Town, while also taking on projects throughout South Africa and selected international work depending on scope.
+        </p>
+        <p>
+          Our work includes kitchens, bathrooms, vanities, basins, fireplaces, feature walls, custom stone elements, cut-to-size fabrication, polishing and finishing.
+        </p>
+        <p>
+          Where a project calls for a bold “solid-stone” appearance, we fabricate with carefully mitred edges and align the vein direction correctly to achieve a clean, high-end result with minimal visible joins.
+        </p>
+      </div>
 
-<section id="fireplaces">
-  <h2>Feature Fireplaces & Statement Walls</h2>
-  <p class="sub">Custom designs using mitred fabrication for a seamless, solid-stone appearance.</p>
-  <div class="gallery">
-    <img src="fire1.jpg">
-    <img src="fire2.jpg">
-    <img src="fire3.jpg">
-  </div>
-</section>
+      <div class="text-box bullet-list">
+        <p>✔ Bespoke residential work</p>
+        <p>✔ Designer-focused finishes</p>
+        <p>✔ Precision vein alignment</p>
+        <p>✔ Cut-to-size and polishing services</p>
+        <p>✔ Trade support and specialist fabrication</p>
+      </div>
+    </div>
+  </section>
 
-<section>
-  <h2>Why Stoneworks</h2>
-  <p class="sub">
-    Over 20 years of experience delivering high-end stone solutions with precision craftsmanship.
-  </p>
-</section>
+  <section id="services">
+    <h2 class="section-title">What We Do</h2>
+    <p class="section-sub">
+      Every part of the business should feel premium — not just one section. That means strong design, strong wording and the right kind of work shown throughout the site.
+    </p>
 
-<section id="contact">
-  <h2>Contact</h2>
-  <p>072 635 6890</p>
-  <p>alistair@stone-works.co.za</p>
-</section>
+    <div class="cards">
+      <div class="card">
+        <h3>Bespoke Stone Kitchens</h3>
+        <p>Luxury kitchen surfaces, waterfall islands, splashbacks, integrated details and premium finishing tailored to the space.</p>
+      </div>
+      <div class="card">
+        <h3>Luxury Bathroom Surfaces</h3>
+        <p>Vanities, basins, cladding, niches and feature slab bathrooms designed for visual impact and refined detail.</p>
+      </div>
+      <div class="card">
+        <h3>Feature Fireplaces & Walls</h3>
+        <p>Statement fireplaces and focal-point wall features fabricated with strong lines, balanced proportions and a high-end finish.</p>
+      </div>
+      <div class="card">
+        <h3>Trade, Cut-to-Size & Polishing</h3>
+        <p>Precision fabrication support for builders, designers, installers and clients requiring specialist stone work.</p>
+      </div>
+    </div>
+  </section>
 
-<a class="whatsapp" href="https://wa.me/27726356890">WhatsApp</a>
+  <section id="kitchens">
+    <h2 class="section-title">Bespoke Stone Kitchens</h2>
+    <p class="section-sub">
+      Designed to be both functional and visually striking, our kitchen work focuses on clean lines, strong proportions and premium material presentation.
+    </p>
+    <div class="gallery">
+      <img src="kitchen1.jpg" alt="Stoneworks kitchen project 1">
+      <img src="kitchen2.jpg" alt="Stoneworks kitchen project 2">
+      <img src="kitchen3.jpg" alt="Stoneworks kitchen project 3">
+    </div>
+  </section>
 
-<footer>
-  © Stoneworks 2026
-</footer>
+  <section id="bathrooms">
+    <h2 class="section-title">Luxury Bathroom Surfaces</h2>
+    <p class="section-sub">
+      From statement slab showers to custom vanities and basin work, our bathroom projects are built to create a premium, architectural feel.
+    </p>
+    <div class="gallery">
+      <img src="bath1.jpg" alt="Stoneworks bathroom project 1">
+      <img src="bath2.jpg" alt="Stoneworks bathroom project 2">
+      <img src="bath3.jpg" alt="Stoneworks bathroom project 3">
+    </div>
+  </section>
+
+  <section class="cta">
+    <h2 class="section-title">Why clients choose Stoneworks</h2>
+    <p>
+      Because the work does not feel average. It feels considered, well-built and premium — with attention given to mitres, material flow, finish quality and the overall impact of the final space.
+    </p>
+    <div class="hero-buttons">
+      <a class="btn btn-gold" href="#contact">Start Your Project</a>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2 class="section-title">Contact</h2>
+    <p class="section-sub">
+      Planning a kitchen, bathroom, fireplace, custom basin or specialist fabrication job? Get in touch and let’s discuss the right solution for your project.
+    </p>
+
+    <div class="contact-box">
+      <p><strong>Phone:</strong> 072 635 6890</p>
+      <p><strong>Email:</strong> alistair@stone-works.co.za</p>
+      <p><strong>Main areas:</strong> Gauteng and Cape Town</p>
+      <p><strong>Also available for:</strong> South Africa-wide and selected international work</p>
+    </div>
+  </section>
+
+  <a class="whatsapp" href="https://wa.me/27726356890">WhatsApp</a>
+
+  <footer>
+    © 2026 Stoneworks. Luxury stone fabrication and installation since 2004.
+  </footer>
 
 </body>
 </html>
