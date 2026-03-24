@@ -1,102 +1,253 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Stoneworks</title>
-
-<style>
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #0f0f0f;
-  color: white;
-}
-
-header {
-  height: 90vh;
-  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('kitchen1.jpg');
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-header h1 {
-  font-size: 50px;
-}
-
-header p {
-  color: #ccc;
-}
-
-section {
-  padding: 60px 20px;
-  max-width: 1200px;
-  margin: auto;
-}
-
-h2 {
-  color: #c9a96e;
-}
-
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
-  gap: 20px;
-}
-
-.gallery img {
-  width: 100%;
-  border-radius: 10px;
-}
-
-.footer {
-  text-align: center;
-  padding: 20px;
-  background: black;
-  color: #aaa;
-}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stoneworks | Marble, Granite, Quartz & Porcelain</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: #fff;
+      line-height: 1.6;
+    }
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(0,0,0,0.92);
+      border-bottom: 1px solid #222;
+    }
+    .nav-wrap {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 16px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .brand {
+      font-size: 1.1rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+    .nav-links a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 18px;
+      font-size: 0.95rem;
+    }
+    .hero {
+      min-height: 88vh;
+      background:
+        linear-gradient(rgba(0,0,0,0.58), rgba(0,0,0,0.58)),
+        url('kitchen1.jpg') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 30px 20px;
+    }
+    .hero-content {
+      max-width: 900px;
+    }
+    .hero h1 {
+      font-size: 3.4rem;
+      line-height: 1.1;
+      margin-bottom: 18px;
+    }
+    .hero p {
+      max-width: 760px;
+      margin: 0 auto 28px;
+      color: #ddd;
+      font-size: 1.1rem;
+    }
+    .btn {
+      display: inline-block;
+      padding: 14px 24px;
+      background: #c6a56b;
+      color: #111;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: 700;
+    }
+    section {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 72px 20px;
+    }
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 18px;
+      color: #c6a56b;
+    }
+    .intro p, .about p, .contact p {
+      color: #ddd;
+      max-width: 900px;
+      margin-bottom: 12px;
+    }
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
+      margin-top: 22px;
+    }
+    .service-card {
+      background: #181818;
+      border: 1px solid #262626;
+      border-radius: 10px;
+      padding: 22px;
+    }
+    .service-card h3 {
+      color: #fff;
+      margin-bottom: 8px;
+      font-size: 1.05rem;
+    }
+    .service-card p {
+      color: #bdbdbd;
+      font-size: 0.95rem;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+      margin-top: 22px;
+    }
+    .gallery img {
+      width: 100%;
+      height: 290px;
+      object-fit: cover;
+      display: block;
+      border-radius: 10px;
+      border: 1px solid #222;
+      background: #1a1a1a;
+    }
+    .contact-box {
+      background: #181818;
+      border: 1px solid #262626;
+      border-radius: 10px;
+      padding: 24px;
+      margin-top: 18px;
+    }
+    footer {
+      background: #000;
+      color: #999;
+      text-align: center;
+      padding: 26px 20px;
+      border-top: 1px solid #222;
+      margin-top: 20px;
+    }
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2.4rem; }
+      .nav-links a { margin-left: 12px; font-size: 0.9rem; }
+    }
+  </style>
 </head>
-
 <body>
 
-<header>
-  <div>
-    <h1>Stoneworks</h1>
-    <p>Luxury stone specialists since 2004</p>
-  </div>
-</header>
+  <nav>
+    <div class="nav-wrap">
+      <div class="brand">STONEWORKS</div>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
 
-<section>
-  <h2>Our Work</h2>
-  <div class="gallery">
-    <img src="kitchen1.jpg">
-    <img src="kitchen2.jpg">
-    <img src="kitchen3.jpg">
-    <img src="bath1.jpg">
-    <img src="bath2.jpg">
-    <img src="bath3.jpg">
-  </div>
-</section>
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Luxury Stone Specialists Since 2004</h1>
+      <p>
+        Marble, granite, quartz, porcelain and sintered stone fabrication for
+        kitchens, bathrooms, fireplaces, custom basins, feature walls and high-end interiors.
+      </p>
+      <a class="btn" href="#contact">Get in touch</a>
+    </div>
+  </section>
 
-<section>
-  <h2>About</h2>
-  <p>We specialise in marble, granite, quartz and porcelain installations including kitchens, bathrooms, fireplaces and custom work.</p>
-</section>
+  <section class="intro">
+    <h2>World-class stone craftsmanship</h2>
+    <p>
+      Stoneworks has been operating since January 2004, delivering premium stone work with a strong focus on detail,
+      clean finishing, vein matching and precise mitred fabrication.
+    </p>
+    <p>
+      We work mainly in Gauteng and Cape Town, while also taking on projects across South Africa and selected international work.
+    </p>
+  </section>
 
-<section>
-  <h2>Contact</h2>
-  <p>📞 072 635 6890</p>
-  <p>✉️ alistair@stone-works.co.za</p>
-</section>
+  <section id="services">
+    <h2>Services</h2>
+    <div class="services">
+      <div class="service-card">
+        <h3>Kitchens</h3>
+        <p>Countertops, splashbacks, islands, waterfall ends and statement stone features.</p>
+      </div>
+      <div class="service-card">
+        <h3>Bathrooms</h3>
+        <p>Vanities, wall cladding, showers, bath surrounds and custom luxury finishes.</p>
+      </div>
+      <div class="service-card">
+        <h3>Fireplaces</h3>
+        <p>Modern and classic surrounds designed to become a focal point in the room.</p>
+      </div>
+      <div class="service-card">
+        <h3>Custom Basins & Sinks</h3>
+        <p>Mitred fabrication with carefully aligned veins for a bold, high-end look.</p>
+      </div>
+      <div class="service-card">
+        <h3>Trade & Cut-to-Size</h3>
+        <p>Precision cut-to-size, polishing and specialist fabrication support for trade clients.</p>
+      </div>
+      <div class="service-card">
+        <h3>Supply & Installation</h3>
+        <p>Full service from material selection through fabrication to final installation.</p>
+      </div>
+    </div>
+  </section>
 
-<div class="footer">
-  © Stoneworks 2026
-</div>
+  <section id="gallery">
+    <h2>Featured work</h2>
+    <div class="gallery">
+      <img src="kitchen1.jpg" alt="Stoneworks kitchen project 1">
+      <img src="kitchen2.jpg" alt="Stoneworks kitchen project 2">
+      <img src="kitchen3.jpg" alt="Stoneworks kitchen project 3">
+      <img src="bath1.jpg" alt="Stoneworks bathroom project 1">
+      <img src="bath2.jpg" alt="Stoneworks bathroom project 2">
+      <img src="bath3.jpg" alt="Stoneworks bathroom project 3">
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <h2>About Stoneworks</h2>
+    <p>
+      Our work is built around clean lines, precise fabrication and premium finishes that elevate the whole space.
+    </p>
+    <p>
+      Where the design calls for a bold “solid block” look, we fabricate with mitred edges and keep the vein direction flowing correctly for a seamless visual result.
+    </p>
+    <p>
+      Whether it’s a luxury kitchen, a high-impact bathroom or a custom feature piece, we aim for a finish that feels world-class.
+    </p>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact</h2>
+    <div class="contact-box">
+      <p><strong>Phone:</strong> 072 635 6890</p>
+      <p><strong>Email:</strong> alistair@stone-works.co.za</p>
+      <p><strong>Areas:</strong> Gauteng, Cape Town, South Africa-wide and selected international projects</p>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 Stoneworks. All rights reserved.
+  </footer>
 
 </body>
 </html>
